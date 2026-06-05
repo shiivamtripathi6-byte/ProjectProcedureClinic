@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProjectProcedureClinic.Models.Home.MyContact>
+
+@{
+    ViewBag.Title = "DisplayMyContact";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+
+        <h2 class="text-center text-danger" style="padding-top: 80px;">Display Contact Details</h2>
+        <hr class="text-danger" />
+
+        <div class="table-responsive">
+            <table class="table" id="example">
+                <thead class="table-striped">
+                    <tr style="background:orangered; color:white; ">
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@data.Name</td>
+                            <td>@data.Email </td>
+                            <td>@data.Mobile</td>
+                            <td>@data.Message</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    </div>

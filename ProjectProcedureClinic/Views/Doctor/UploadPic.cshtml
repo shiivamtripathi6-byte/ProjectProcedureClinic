@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "UploadPic";
+    Layout = "~/Views/Shared/DoctorZone.cshtml";
+}
+<div class="row">
+<div class="col-4">
+</div>
+<div class="col-6" style="border-bottom-color:aqua">
+    <h2 class="text-center mb-3 text-primary">Upload Doctor Profile Picture</h2>
+    <hr />
+    <form action="~/Doctor/UploadPic" method="post" enctype="multipart/form-data">
+        Doctor Id
+        <input type="text" class="form-control" name="DoctorId" />
+        Doctor Picture
+        <input type="file" class="form-control" name="fupic" />
+        <br />
+        <input type="submit" class="form-control btn btn-primary" value="Upload Now" />  
+    </form> 
+</div>
+<div class="col-2"></div>
+    </div>
+
+

@@ -1,0 +1,72 @@
+﻿@model ProjectProcedureClinic.Models.Admin.Add_Doctor
+@{
+    ViewBag.Title = "Add_Doctor";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h3 class="text-center mb-3 text-danger">Add Doctor</h3>
+            
+            @using(Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <h1 class="text-info text-center" style="padding-top:4%">Add Doctor Details</h1> 
+                <hr />
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Doctor_Name)
+                            @Html.TextBoxFor(m => m.Doctor_Name, new { @class = "form-control"})
+                            @Html.ValidationMessageFor(m => m.Doctor_Name)
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Qualification)
+                            @Html.TextBoxFor(m => m.Qualification, new { @class="form-control"})
+                            @Html.ValidationMessageFor(m => m.Qualification)
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Mobile_No)
+                            @Html.TextBoxFor(m => m.Mobile_No, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Mobile_No)  
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Specialist)
+                            @Html.TextBoxFor(m => m.Specialist, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Specialist)
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Amount)
+                            @Html.TextBoxFor(m => m.Amount, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Amount)
+                            
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Doctor_Timing)
+                            @Html.TextBoxFor(m => m.Doctor_Timing, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Doctor_Timing)
+
+
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(m => m.Doctor_Password)
+                            @Html.TextBoxFor(m => m.Doctor_Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Doctor_Password)
+
+
+                        </div>
+                        <div class="mb-3">
+                         <input type="submit" value="Add Doctor" class="btn btn-success w-100 text-light" />   
+                        </div>
+                    </div>
+                    @Html.ActionLink("Back to List", "Index", null, new { @class="btn btn-secondary w-100"})
+                </div>
+            }
+        </div>
+    </div> 
+</div>
+       <h3>@ViewBag.show</h3> 

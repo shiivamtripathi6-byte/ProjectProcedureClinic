@@ -1,0 +1,212 @@
+﻿@model IEnumerable<ProjectProcedureClinic.Models.Admin.View_Doctor>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/GeneralMaster.cshtml";
+}
+<link href="~/Content/Index.css" rel="stylesheet" />
+
+<!-- Carousel Section -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/content/images/img3.jpeg" class="d-block w-100" alt="yamunotri" style="height:550px; object-fit:cover;">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h1>Welcome To HomeCare</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="~/Home/AboutUs" class="btn btn-dark">Read More</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/content/images/img6.jpg" class="d-block w-100" alt="uttari" style="height:550px; object-fit:cover;">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h1>At vero eos et accusamus</h1>
+                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+                <a href="~/Home/AboutUs" class="btn btn-dark">Read More</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/content/images/img7.jpg" class="d-block w-100" alt="image2" style="height:550px; object-fit:cover;">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h1>Temporibus autem quibusdam</h1>
+                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                <a href="~/Home/AboutUs" class="btn btn-dark">Read More</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/content/images/img8.jpg" class="d-block w-100" alt="image3" style="height:550px; object-fit:cover;">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Values Section -->
+<section class="py-5 bg-light">
+    <div class="container d-flex justify-content-between flex-wrap text-center">
+        <div class="p-3 m-2 bg-white rounded shadow-sm flex-fill">
+            <h2>❤️</h2>
+            <h5>Lorem Ipsum</h5>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+        </div>
+        <div class="p-3 m-2 bg-white rounded shadow-sm flex-fill">
+            <h2>❤️</h2>
+            <h5>Sed ut perspici</h5>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+        </div>
+        <div class="p-3 m-2 bg-white rounded shadow-sm flex-fill">
+            <h2>🔒</h2>
+            <h5>Magni Dolores</h5>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+        </div>
+        <div class="p-3 m-2 bg-white rounded shadow-sm flex-fill">
+            <h2>⚕️</h2>
+            <h5>Nemo Enim</h5>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Section -->
+<section class="py-5 text-center text-light bg-primary">
+    <div class="container">
+        <h2>In an emergency? Need help now?</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <a href="#" class="btn btn-dark">Make an Appointment</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center text-primary">About Us</h2>
+        <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="~/Content/images/hospital2.jpg" class="img-fluid rounded" alt="About Image">
+            </div>
+            <div class="col-md-6">
+                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <ul>
+                    <li>✔ Ullamco laboris nisi ut aliquip.</li>
+                    <li>✔ Duis aute irure dolor in reprehenderit.</li>
+                    <li>✔ Excepteur sint occaecat cupidatat non.</li>
+                    <li>✔ Ullamco laboris nisi ut aliquip consequat.</li>
+                </ul>
+                <a href="~/Home/AboutUs" class="btn btn-primary">Read More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center text-primary mb-4">Our Hospital Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/Content/images/cardiolo.jpeg" class="card-img-top" alt="Cardiology Service">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiology</h5>
+                        <p class="card-text">Advanced heart care services including ECG, Echo, angiography, and full cardiac checkups.</p>
+                        <a href="~/Home/AboutUs" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/Content/images/nero.jpeg" class="card-img-top" alt="Neurology Service">
+                    <div class="card-body">
+                        <h5 class="card-title">Neurology</h5>
+                        <p class="card-text">Stroke treatment, EEG, nerve testing, and expert consultation for all neurological disorders.</p>
+                        <a href="~/Home/AboutUs" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/Content/images/emergency.jpeg" class="card-img-top" alt="Emergency Care">
+                    <div class="card-body">
+                        <h5 class="card-title">24/7 Emergency Care</h5>
+                        <p class="card-text">Fully equipped emergency unit with life‑saving facilities and dedicated doctors available round the clock.</p>
+                        <a href="~/Home/AboutUs" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Departments Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4 text-primary">Hospital Departments</h2>
+        <p class="text-center text-muted mb-5">We provide world-class medical services</p>
+        <div class="row g-4">
+            @* Example Department Card *@
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-3 shadow-sm">
+                    <i class="fa-solid fa-heart-pulse fa-2x mb-3 text-primary"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiology</h5>
+                        <p class="card-text">Advanced heart care, diagnosis and treatment by expert cardiologists.</p>
+                        <a href="/Home/AboutUs" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-3 shadow-sm">
+                    <i class="fa-solid fa-brain fa-2x mb-3 text-primary"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Neurology</h5>
+                        <p class="card-text">Complete care for brain, spine and nervous system disorders.</p>
+                        <a href="/Home/AboutUs" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center p-3 shadow-sm">
+                    <i class="fa-solid fa-user-doctor fa-2x mb-3 text-primary"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Orthopedics</h5>
+                        <p class="card-text">Bone, joint and muscle treatment with modern techniques.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Doctors Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4 text-primary">Doctors</h2>
+        <div class="row justify-content-center g-4">
+            @foreach (var data in Model)
+            {
+                <div class="col-md-3 text-center bg-white p-4 rounded shadow-sm">
+                    <img src="~/Content/images/DoctorsPic/@data.fupic" class="img-fluid rounded-circle mb-3" style="height:120px; width:120px;">
+                    <h5>@data.Name</h5>
+                    <p><strong>Specialist:</strong> @data.Specilist</p>
+                    <p><strong>Fees:</strong> @data.Amount</p>
+                    <p><strong>Timing:</strong> @data.Time</p>
+                    <a href="~/Home/AddPatient" class="btn btn-primary btn-sm">Appointment</a>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,72 @@
+﻿@model ProjectProcedureClinic.Models.Patient.AddPatient
+@{
+    ViewBag.Title = "Update_View_Appointment";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+<div class="row">
+<div class="col-4"></div>
+<div class="col-4" style="margin-top:2%;padding:3%">
+    <hr />
+@using (Html.BeginForm("Update_View_Appointment", "Admin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <h1 class="text-info text-center" style="padding-top:4%;">Update Patient Profile</h1>
+    <hr />
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Mobile)
+                    @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control", Readonly=true })
+                    @Html.ValidationMessageFor(model => model.Mobile)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.DoctorName)
+                    @Html.TextBoxFor(model => model.DoctorName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DoctorName)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Disease)
+                    @Html.TextBoxFor(model => model.Disease, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Disease)
+                </div>
+
+            </div>
+            <!-- Right Half -->
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Age)
+                        @Html.TextBoxFor(model => model.Age, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Age)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.AppointmentDate)
+                        @Html.TextBoxFor(model => model.AppointmentDate, new { @class = "form-control", id = "datepicker" })
+                        @Html.ValidationMessageFor(model => model.AppointmentDate)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Address)
+                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Address)
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" value="Update Appointment" class="btn btn-success w-100 text-light" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+   </div>
+ </div>
+<h3>@ViewBag.msg</h3>
+
+

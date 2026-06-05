@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/PatientMaster.cshtml";
+}
+
+<h2>Index</h2>
+<h1>Test Encryption and Decryption</h1>
+<form action="~/Patient/Index" method="post">
+    Enter String
+    <input type="text" name="txtenc" />
+    <input type="submit" value="Encrypt Now" />
+    <br />
+    <h3>Encrypt Now: @ViewBag.enc</h3>
+    <h3>Decrypt Now: @ViewBag.desc</h3>
+</form>

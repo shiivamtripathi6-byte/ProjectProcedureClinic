@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProjectProcedureClinic.Models.Doctors.ViewComplain>
+
+@{
+    ViewBag.Title = "ViewComplain";
+    Layout = "~/Views/Shared/DoctorZone.cshtml";
+}
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+        <h2 class="text-center text-danger text" style="padding-top:80px">View Complain</h2>
+        <hr />
+        <table cellspacing="0" cellpadding="0" class="table" id="example">
+            <thead class="table-striped">
+                <tr style="background:orangered; color:white">
+                            <th>Patient Name</th>
+                            <th>Mobile</th>
+                            <th>Complain</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                </thead>
+            <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.PatientName</td>
+                                <td>@item.Mobile</td>
+                                <td>@item.ComplainText</td>
+                                <td>@item.Date.ToString("dd-MM-yyyy")</td>
+                                <td>@item.Status</td>
+                                <td>
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ComplainID }, new { @class = "btn btn-danger btn-sm" })
+                                    @Html.ActionLink("Update", "UpdateComplain", new { id = item.ComplainID, status = "Update" }, new { @class = "btn btn-primary btn-sm" })
+                                </td>
+                            </tr>
+                        }
+                </tbody>
+            </table>
+        </div>
+    </div>
+

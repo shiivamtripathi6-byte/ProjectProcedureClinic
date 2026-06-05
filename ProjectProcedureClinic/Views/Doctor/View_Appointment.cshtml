@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ProjectProcedureClinic.Models.Doctors.ViewAppointment>
+
+@{
+    ViewBag.Title = "View_Appointment";
+    Layout = "~/Views/Shared/DoctorZone.cshtml";
+}
+<link href="~/Content/akash.css" rel="stylesheet" />
+<style>
+    table td, table th {
+        padding: 2px 4px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+        <h2 class="text-center text-danger text" style="padding-top:80px">Appointment</h2>
+        <hr />
+        <table cellspacing="0" cellpadding="0" class="table" id="example">
+            <thead class="table-striped">
+                <tr style="background:orangered; color:white">
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Doctor Name</th>
+                    <th>Disease</th>
+                    <th>Age</th>
+                    <th>Date</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var data in Model)
+                {
+                    <tr>
+                        <td>@data.Name</td>
+                        <td>@data.Mobile</td>
+                        <td>@data.DoctorName</td>
+                        <td>@data.Disease</td>
+                        <td>@data.Age</td>
+                        <td>@data.AppointmentDate</td>
+                        <td>@data.Address</td>
+                        <td>@ViewBag.Status</td>
+                        <td>
+                            <a href="/Admin/Update_View_Appointment?up=@data.Mobile" class="btn btn-info text-light">Update</a>
+                        </td>
+                        <td>
+                            <a href="/Admin/Delete_View_Appointment?con=@data.Mobile" class="btn btn-danger text-light">Delete</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/akash.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#example").DataTable();
+    });
+</script>
+

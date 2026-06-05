@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/PatientMaster.cshtml";
+}
+<style>
+    #s1,#s2,#s3,#s4,#s5{
+        text-align:center;
+        font-size:55px; 
+        color:green;
+        cursor:pointer;
+    }
+    #sp1, #sp2, #sp3, #sp4,#sp5{
+        display:none;
+    }
+</style>
+<div class="row">
+<div class="col-4"></div>
+<div class="col-4" style="margin:2%;box-shadow:0px 0px 10px 0px gray;padding:4%">
+    <h2 class="text text-center text-info" style="text-decoration:underline">Patient Feedback Panel</h2>
+    <h5 style="color:orangered">Rate Now</h5><br />
+    <span id="s1">&#9734;</span>
+    <span id="s2">&#9734;</span>
+    <span id="s3">&#9734;</span>
+    <span id="s4">&#9734;</span>
+    <span id="s5">&#9734;</span>
+    <span id="sp1">1</span>
+    <span id="sp2">2</span>
+    <span id="sp3">3</span>
+    <span id="sp4">4</span>
+    <span id="sp5">5</span>
+    <br />
+    <h5 style="color:orangered">Write Your Review</h5>
+    <textarea style="height:160px" id="txtmessage" class="form-control"></textarea>
+    <br />
+    <input type="button" id="btnFeedback" value="Feedback Now" class="form-control btn btn-danger" /> 
+    <div id="result" style="margin-top:10px; font-weight:bold;"></div>
+</div>
+<div class="col-4"></div>
+</div>
+<script src="~/Scripts/HomeData/InsertFeedback.js"></script>

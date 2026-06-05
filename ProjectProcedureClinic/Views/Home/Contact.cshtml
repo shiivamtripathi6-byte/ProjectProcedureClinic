@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/GeneralMaster.cshtml";
+}
+
+<div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+        <h2>Insert Data Using Ajax</h2>
+        <hr />
+        Enter Name
+        <input type="text" class="form-control" id="txtname" />
+        Enter Email
+        <input type="email" class="form-control" id="txtemail" />
+        Enter Mobile
+        <input type="text" class="form-control" id="txtmobile" />
+        Enter Message
+        <input type="text" class="form-control" id="txtmsg" />
+        <br />
+        <input type="button" class="form-control btn btn-success" value="Enquiry Now" id="btnsave" />
+        <input type="button" class="form-control btn btn-primary" value="Display Data" id="btndisplay" />
+        <h3 id="result"></h3>
+    </div>
+    <div class="col-4"></div>
+    <div class="col-2"></div>
+    <div class="col-8">
+        <table id="tbldisplay" class="table table-responsive"></table>
+    </div>
+</div>
+<script src="~/Scripts/HomeData/InsertEnquiry.js"></script>
+
+

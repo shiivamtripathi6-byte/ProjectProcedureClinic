@@ -1,0 +1,65 @@
+﻿@model ProjectProcedureClinic.Models.Patient.atientDashboardVM
+@{
+    ViewBag.Title = "Patient Dashboard";
+    Layout = "~/Views/Shared/PatientMaster.cshtml";
+}
+<div class="container py-4">
+    <h2 class="text-center text-primary mb-4">Welcome, @Session["PatientName"]</h2>
+
+    <div class="row g-4 mb-4" style="height:250px">
+        <div class="col-md-6">
+            <div class="card text-white bg-success" style="height:200px">
+                <div class="card-body text-center">
+                    <h5>Total Appointments</h5>
+                    <h2>@Model.TotalAppointments</h2>
+                    <i class="fa fa-calendar fa-2x"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-white bg-warning" style="height:200px">
+                <div class="card-body text-center">
+                    <h5>Upcoming Appointments</h5>
+                    <h2>@Model.UpcomingAppointments</h2>
+                    <i class="fa fa-clock fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-primary mb-3">Your Appointments</h3>
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Date</th>
+                <th>Doctor</th>
+                <th>Disease</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appt in Model.Appointments)
+            {
+                <tr>
+                    <td>@appt.AppointmentDate.ToString("dd/MM/yyyy")</td>
+                    <td>@appt.DoctorName</td>
+                    <td>@appt.Disease</td>
+                    <td>
+                        @if (appt.Status == "Pending")
+                        {
+                            <span class="badge bg-warning">Pending</span>
+                        }
+                        else if (appt.Status == "Completed")
+                        {
+                            <span class="badge bg-success">Completed</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">@appt.Status</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

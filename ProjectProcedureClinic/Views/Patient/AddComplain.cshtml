@@ -1,0 +1,34 @@
+﻿@model ProjectProcedureClinic.Models.Patient.Complain
+@{
+    ViewBag.Title = "AddComplain";
+    Layout = "~/Views/Shared/PatientMaster.cshtml";
+}
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+<h3>Add Patient Complain</h3>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label>Patient Name</label>
+        @Html.TextBoxFor(m => m.PatientName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Mobile</label>
+        @Html.TextBoxFor(m => m.Mobile, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Complain</label>
+        @Html.TextAreaFor(m => m.ComplainText, new { @class = "form-control", rows = 3 })
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-success" />
+}
+</div>
+    <div class="col-4"></div>
+</div>
+<h3>@ViewBag.show</h3>

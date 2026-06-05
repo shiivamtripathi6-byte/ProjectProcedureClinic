@@ -1,0 +1,114 @@
+﻿
+          .hero {
+                background: url('/Content/images/service2.jpg') no-repeat;
+                background-size: cover;
+                object-fit: cover;
+                background-attachment: fixed;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                height: 550px;
+            }
+
+                .hero::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0,0,0,0.5);
+                }
+
+            .hero-text {
+                position: relative;
+                color: white;
+                text-align: center;
+                z-index: 2;
+            }
+
+                .hero-text h1 {
+                    font-size: 3rem;
+                }
+
+            /* Container */
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin: 40px auto;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 25px;
+                color: orangered;
+            }
+
+            /* Service Grid */
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+            }
+
+            .service-box {
+                background: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                transition: 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+                /* Bottom-to-top hover color effect */
+                .service-box::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(255,69,0,0.35);
+                    transition: bottom 0.4s ease;
+                }
+
+                .service-box:hover::after {
+                    bottom: 0;
+                }
+
+                .service-box h3 {
+                    margin-top: 10px;
+                    color: #0055a5;
+                }
+
+                .service-box p {
+                    margin-top: 10px;
+                    font-size: 15px;
+                    line-height: 1.6;
+                }
+
+            .service-icon {
+                font-size: 40px;
+                color: orangered;
+            }
+
+            /* Footer */
+            .footer {
+                background: #00395d;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 40px;
+            }
+
+            media(max-width:600px) {
+                .hero-text h1;
+
+            {
+                font-size: 2rem;
+            }

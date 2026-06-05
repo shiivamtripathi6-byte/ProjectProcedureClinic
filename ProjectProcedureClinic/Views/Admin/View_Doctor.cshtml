@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ProjectProcedureClinic.Models.Admin.View_Doctor>
+@{
+    ViewBag.Title = "View_Doctor";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+<link href="~/Content/akash.css" rel="stylesheet" />
+<style>
+    table td, table th {
+        padding: 2px 4px;
+    }
+
+</style>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+
+        <h2 class="text-center text-danger" style="padding-top: 80px;">View_Doctor</h2>
+        <hr class="text-danger" />
+
+        <div class="table-responsive">
+            <table cellspacing="0" cellpadding="0" class="table" id="example">
+                <thead class="table-striped">
+                    <tr style="background:orangered; color:white; ">
+                        <th>Name</th>
+                        <th>Qualification</th>
+                        <th>Mobile</th>
+                        <th>Specilist</th>
+                        <th>Doctor Fee</th>
+                         <th>Timing</th>
+                        <th>Password</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@data.Name</td>
+                            <td>@data.Qualification</td>
+                            <td>@data.Mobile_No</td>
+                            <td>@data.Specilist</td>
+                            <td>@data.Amount</td>
+                            <td>@data.Time</td>
+                            <td>@data.Password</td>
+                            <td>@ViewBag.Status</td>
+                            <td>
+                                <a href="/Admin/Update_View_Doctor?up=@data.Mobile_No" class=" btn btn-info text-light">Update</a>
+                            </td>
+                            <td>
+                                <a href="/Admin/Delete_View_Doctor?Mobile=@data.Mobile_No" class="btn btn-danger text-light">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<script src="~/scripts/akash.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#example").DataTable();
+    });
+</script>
